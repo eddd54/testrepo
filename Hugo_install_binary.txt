@@ -1,4 +1,4 @@
-## Hugo install
+## Hugo install binary
 ## https://gohugo.io/getting-started/installing/#binary-cross-platform
 
 mkdir _tmp
