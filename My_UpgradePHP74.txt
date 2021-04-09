@@ -1,0 +1,37 @@
+### upgrade withou remi repo
+
+# list pkgs
+sudo yum list installed | grep php > phpPkglist.txt
+sudo amazon-linux-extras |grep php
+
+# php 7.2 to 7.3|7.4|8.0
+sudo yum remove php*
+sudo amazon-linux-extras disable php7.2
+sudo amazon-linux-extras disable lamp-mariadb10.2-php7.2
+sudo amazon-linux-extras enable php7.4
+sudo yum clean metadata
+sudo yum install php-cli php-pdo php-fpm php-json php-mysqlnd php-xml php-mbstring -y
+php -v
+
+# mariadb 10.2 to 10.5 / howto install MariaDB 10.5 ( https://techviewleo.com/how-to-install-mariadb-server-on-amazon-linux/ )
+sudo yum remove mariadb*
+
+
+# install composer
+(don't install composer with yum, it's old and slow)
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/bin/composer
+
+# install jetstream
+composer create-project laravel/laravel laravel-app-jetstream
+cd laravel-app-jetstream/
+composer require laravel/jetstream
+(php artisan jetstream:install livewire)
+
+# install and compile node 12.14
+nvm install 12.14.0 && npm run dev
+
+php artisan serve --port=8080
+
+
+
