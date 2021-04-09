@@ -13,3 +13,5 @@ git config credential.helper cache
 git config --global credential.cacheOptions "--timeout 300"
 git status
 git add [file]
+git commit -m "message"
+git push
