@@ -1,0 +1,30 @@
+## Upgrade to php 8.0 using Remi repository
+
+sudo yum list installed | grep php > phpPkglist.txt
+sudo yum remove php-*
+sudo yum remove mariadb*
+
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+sudo yum-config-manager --enable remi-php80
+
+sudo yum install php80
+php80 -v
+
+sudo ln -s /usr/bin/php80 /usr/bin/php
+
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/bin/composer
+
+sudo yum install php80-php-mbstring php80-php-xml php80-php-pdo php80-php-mysqlnd
+
+composer create-project laravel/laravel laravel-app-jetstream
+composer require laravel/jetstream
+(php artisan jetstream:install livewire)
+
+nvm install 12.14.0 && npm run dev
+
+php artisan serve --port=8080
+
+
+
