@@ -1,3 +1,5 @@
+### upgrade withou remi repo
+
 # list pkgs
 sudo yum list installed | grep php > phpPkglist.txt
 sudo amazon-linux-extras |grep php
