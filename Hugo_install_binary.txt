@@ -11,3 +11,5 @@ which hugo
 # git creds
 git config credential.helper cache
 git config --global credential.cacheOptions "--timeout 300"
+git status
+git add [file]
