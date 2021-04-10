@@ -4,8 +4,8 @@
 # https://git-scm.com/docs/git-credential-cache
 
 git config credential.helper cache
-#git config --global credential.cacheOptions "--timeout 300"
 #git config credential.helper 'cache --timeout=300'
+#git config --global credential.cacheOptions "--timeout 300"
 
 git status
 git add [file]
