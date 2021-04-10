@@ -7,3 +7,4 @@ wget https://github.com/gohugoio/hugo/releases/download/v0.82.0/hugo_0.82.0_Linu
 tar xzvf hugo_0.82.0_Linux-64bit.tar.gz 
 sudo cp -a hugo /usr/local/bin/
 which hugo
+hugo version
