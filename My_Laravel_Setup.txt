@@ -1,22 +1,33 @@
 Laravel Project Setup
 
+# install composer
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/bin/composer
+
+# install laravel
 composer create-project laravel/laravel laravel-app-ui 
 cd laravel-app-ui/
 
+# install scaffolding
 composer require laravel/ui
 php artisan ui bootstrap --auth
 ( // or
 php artisan ui vue --auth
 php artisan ui react --auth
 )
+
+# install Node
 npm install && npm run dev
 
+# setup sqlite
 touch database/database.sqlite
-edit/comment out mysql values in .env file
+# edit/comment out mysql values in .env file
 edit/update DB_CONNECTION value to sqlite in config/database.php
 (
     'default' => env('DB_CONNECTION', 'sqlite'),
 )
+
+
 php artisan migrate
 
 ( // edit app/Providers/AppServiceProvider.php boot() method to make preview urls works with cloud9
