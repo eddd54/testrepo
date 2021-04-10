@@ -1,5 +1,6 @@
 ## Hugo install binary
 ## https://gohugo.io/getting-started/installing/#binary-cross-platform
+## https://pineco.de/serve-your-hugo-blog-through-laravel/
 
 mkdir _tmp
 cd _tmp/
