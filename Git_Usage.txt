@@ -1,4 +1,4 @@
-# store git creds to memory
+### store git creds to memory
 # https://github.com/microsoft/Git-Credential-Manager-Core/blob/master/docs/linuxcredstores.md#3-gits-built-in-credential-cache
 # https://git-scm.com/docs/git-credential-cache
 
@@ -6,9 +6,10 @@
 #git config credential.helper cache 
 #git config --global credential.cacheOptions "--timeout 300"
 
-# set for 6hrs / 21600s
+### set for 6hrs / 21600s
 git config credential.helper 'cache --timeout=21600'
 
+### general usage
 git status
 git add [file]
 git commit -m "message"
