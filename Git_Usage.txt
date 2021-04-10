@@ -3,6 +3,10 @@
 # https://git-scm.com/docs/git-credential-cache
 # https://docs.github.com/en/github/getting-started-with-github/caching-your-github-credentials-in-git
 
+### git tutorials
+# https://training.github.com/downloads/github-git-cheat-sheet/
+# https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
 #cache default 300s / 15min
 #git config credential.helper cache 
 #git config --global credential.cacheOptions "--timeout 300"

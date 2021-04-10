@@ -1,4 +1,6 @@
-Laravel Project Setup
+### Laravel Project Setup
+# https://packagist.org/packages/laravel/
+
 
 # install composer
 curl -sS https://getcomposer.org/installer | php
