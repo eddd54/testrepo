@@ -1,4 +1,5 @@
-### upgrade withou remi repo
+### upgrade without remi repo
+# https://techviewleo.com/install-php-7-on-amazon-linux/
 
 # list pkgs
 sudo yum list installed | grep php > phpPkglist.txt
